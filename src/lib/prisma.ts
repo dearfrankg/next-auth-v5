@@ -1,8 +1,12 @@
+import { PrismaNeon } from "@prisma/adapter-neon";
+import { Pool } from "@neondatabase/serverless";
 import { PrismaClient } from "@prisma/client";
 
 const prismaClientSingleton = () => {
-  // TODO: Make this edge-compatible
-  return new PrismaClient();
+  // now edge compatible
+  const neon = new Pool({ connectionString: process.env.POSTGRES_PRISMA_URL });
+  const adapter = new PrismaNeon(neon);
+  return new PrismaClient({ adapter });
 };
 
 declare global {
