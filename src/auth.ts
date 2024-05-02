@@ -19,8 +19,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
   },
   providers: [
-    Google,
-    GitHub,
+    Google({ allowDangerousEmailAccountLinking: true }),
+    GitHub({ allowDangerousEmailAccountLinking: true }),
     // Resend({
     //   from: "no-reply@tutorial.codinginflow.com",
     // }),
