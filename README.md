@@ -1,6 +1,6 @@
-# Next-Auth V5 Tutorial
+# Next-Auth V5
 
-This is the code for my Next-auth 5.0 tutorial on YouTube: https://www.youtube.com/watch?v=bMYZSi_LZ2w
+Reference: https://www.youtube.com/watch?v=bMYZSi_LZ2w
 
 Topics I cover:
 
